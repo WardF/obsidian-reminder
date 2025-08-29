@@ -29,9 +29,7 @@ export class ReminderPluginUI {
       this.plugin,
       // On select a reminder in the list
       (reminder) => {
-        if (this.plugin.settings.silence.value == true) {
-          // Do not show buildin notification
-        }
+        if (this.plugin.settings.silence.value == true) {}
         else {
           if (reminder.muteNotification) {
             this.showReminder(reminder);
