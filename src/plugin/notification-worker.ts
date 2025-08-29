@@ -2,7 +2,7 @@ import type ReminderPlugin from "main";
 import type { Reminder } from "model/reminder";
 
 export class NotificationWorker {
-  constructor(private plugin: ReminderPlugin) { }
+  constructor(private plugin: ReminderPlugin) {}
 
   startPeriodicTask() {
     let intervalTaskRunning = true;
@@ -49,7 +49,7 @@ export class NotificationWorker {
 
     if (this.plugin.settings.silence.value == true) {
       // Do not show buildin notification
-      return
+      return;
     }
     let previousReminder: Reminder | undefined = undefined;
     for (const reminder of expired) {

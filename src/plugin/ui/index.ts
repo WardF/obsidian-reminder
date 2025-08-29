@@ -204,7 +204,7 @@ export class ReminderPluginUI {
 class EditDetector {
   private lastModified?: Date;
 
-  constructor(private editDetectionSec: ReadOnlyReference<number>) { }
+  constructor(private editDetectionSec: ReadOnlyReference<number>) {}
 
   fileChanged() {
     this.lastModified = new Date();
